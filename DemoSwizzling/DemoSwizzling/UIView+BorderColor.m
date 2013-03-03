@@ -10,8 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
 
-void MethodSwizzle(Class c, SEL origSEL, SEL overrideSEL)
-{
+void MethodSwizzle(Class c, SEL origSEL, SEL overrideSEL) {
     Method origMethod = class_getInstanceMethod(c, origSEL);
     Method overrideMethod = class_getInstanceMethod(c, overrideSEL);
     
@@ -23,8 +22,7 @@ void MethodSwizzle(Class c, SEL origSEL, SEL overrideSEL)
 
 // initWithNibName:bundle: llamará a initWithCoder: para instanciar tu vista desde el xib
 
-- (id)swizzled_initWithCoder:(NSCoder *)decoder
-{
+- (id)swizzled_initWithCoder:(NSCoder *)decoder {
     // Llamamos al original
     id result = [self swizzled_initWithCoder:decoder];
     
@@ -40,8 +38,7 @@ void MethodSwizzle(Class c, SEL origSEL, SEL overrideSEL)
     return result;
 }
 
-+ (void)load
-{
++ (void)load {
     // "+ load" se invoca cada vez que una clase o categoría es añadida al runtime
     // Se llama antes incluso que la función "main"
     MethodSwizzle(self, @selector(initWithCoder:), @selector(swizzled_initWithCoder:));
