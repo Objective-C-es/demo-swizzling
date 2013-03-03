@@ -18,6 +18,7 @@
 		D313EE0116E38D2900353908 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D313EE0016E38D2900353908 /* Default-568h@2x.png */; };
 		D313EE0416E38D2900353908 /* RAMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D313EE0316E38D2900353908 /* RAMViewController.m */; };
 		D313EE0716E38D2900353908 /* RAMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D313EE0516E38D2900353908 /* RAMViewController.xib */; };
+		D313EE0F16E3911D00353908 /* UIView+BorderColor.m in Sources */ = {isa = PBXBuildFile; fileRef = D313EE0E16E3911D00353908 /* UIView+BorderColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		D313EE0216E38D2900353908 /* RAMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RAMViewController.h; sourceTree = "<group>"; };
 		D313EE0316E38D2900353908 /* RAMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RAMViewController.m; sourceTree = "<group>"; };
 		D313EE0616E38D2900353908 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RAMViewController.xib; sourceTree = "<group>"; };
+		D313EE0D16E3911D00353908 /* UIView+BorderColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BorderColor.h"; sourceTree = "<group>"; };
+		D313EE0E16E3911D00353908 /* UIView+BorderColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BorderColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,7 @@
 				D313EE0216E38D2900353908 /* RAMViewController.h */,
 				D313EE0316E38D2900353908 /* RAMViewController.m */,
 				D313EE0516E38D2900353908 /* RAMViewController.xib */,
+				D313EE1016E3912300353908 /* Categories */,
 				D313EDF116E38D2900353908 /* Supporting Files */,
 			);
 			path = DemoSwizzling;
@@ -105,6 +109,15 @@
 				D313EE0016E38D2900353908 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D313EE1016E3912300353908 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D313EE0D16E3911D00353908 /* UIView+BorderColor.h */,
+				D313EE0E16E3911D00353908 /* UIView+BorderColor.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +190,7 @@
 				D313EDF716E38D2900353908 /* main.m in Sources */,
 				D313EDFB16E38D2900353908 /* RAMAppDelegate.m in Sources */,
 				D313EE0416E38D2900353908 /* RAMViewController.m in Sources */,
+				D313EE0F16E3911D00353908 /* UIView+BorderColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
